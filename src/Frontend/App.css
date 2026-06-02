@@ -1,0 +1,41 @@
+
+.App-header {
+  background-color: #2754b0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 20px;
+  color: rgb(245, 245, 245);
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li a {
+  color: rgb(245, 245, 245);
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: #d29512;
+}
+.App-link {
+  color: #d29512;
+}
+.App-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.App-main h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
