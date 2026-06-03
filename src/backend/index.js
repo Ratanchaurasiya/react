@@ -17,6 +17,8 @@ app.post("/register", async (req, res) => {
     }
 });
 
-app.listen(5500, () => {
-    console.log('Backend server running on http://localhost:5500');
+const PORT = process.env.PORT || 5500;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`✅ Backend server running on port ${PORT}`);
 });

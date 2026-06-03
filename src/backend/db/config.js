@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
-mongoose.connect("mongodb://localhost:27017/registration")
-  .then(() => console.log("MongoDB Connected to 'registration' database"))
-  .catch((err) => console.log(err));
+const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/registration";
+
+mongoose.connect(MONGO_URI)
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch((err) => console.log("❌ MongoDB Connection Error:", err));
