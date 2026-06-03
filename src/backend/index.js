@@ -7,18 +7,31 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// Home Route
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running successfully");
+});
+
+// Register Route
 app.post("/register", async (req, res) => {
-    try {
-        const user = new user_modal(req.body);
-        const result = await user.save();
-        res.send({success: true, data: result});
-    } catch (error) {
-        res.status(500).send({success: false, message: error.message});
-    }
+  try {
+    const user = new user_modal(req.body);
+    const result = await user.save();
+
+    res.send({
+      success: true,
+      data: result
+    });
+  } catch (error) {
+    res.status(500).send({
+      success: false,
+      message: error.message
+    });
+  }
 });
 
 const PORT = process.env.PORT || 5500;
 
 app.listen(PORT, "0.0.0.0", () => {
-    console.log(`✅ Backend server running on port ${PORT}`);
+  console.log(`✅ Backend server running on port ${PORT}`);
 });
