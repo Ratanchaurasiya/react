@@ -16,16 +16,6 @@ import Header from './Header';
 import Registration from './Registration';
 import './App.css';
 
-
-// import Footer from './Footer';
-// import Counter from './Counter';
-
-
-let a = prompt("Enter your name");
-a = Number.parseInt(a);
-
-
-
 const App = () => {
         return(
                 <BrowserRouter>
